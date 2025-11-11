@@ -239,7 +239,7 @@ class Resource(Base):
     size_spec = Column(JSON, default={})  # Instance type, storage size, etc.
     
     # Additional metadata
-    metadata = Column(JSON, default={})
+    resource_metadata = Column(JSON, default={})
     
     # Timestamps
     first_seen = Column(DateTime, default=datetime.utcnow, nullable=False)
