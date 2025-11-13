@@ -203,15 +203,6 @@ npm run dev
 
 **Value Proposition**: Pay 20% of what we save you
 
-## 🎓 O-1 Visa Evidence
-
-This project is being built to generate evidence for an O-1 visa application:
-
-- Technical innovation in cloud cost optimization
-- Open-source contributions (after beta)
-- Commercial traction (target: 25+ customers)
-- Technical writing & thought leadership
-
 ## 📝 License
 
 Proprietary - All rights reserved (will open-source components post-launch)
