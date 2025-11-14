@@ -342,3 +342,6 @@ class SavingsReport(Base):
     
     # Relationships
     organization = relationship("Organization", back_populates="savings_reports")
+
+    # Add to CloudAccount relationships
+    aws_resources = relationship("AWSResource", back_populates="cloud_account")
