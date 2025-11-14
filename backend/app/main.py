@@ -8,6 +8,8 @@ import os
 from dotenv import load_dotenv
 from app.routers import auth
 from app.database import engine, Base
+from app.routers import analysis
+from app.routers import cloud_accounts
 
 # Load environment variables
 load_dotenv()
@@ -66,3 +68,10 @@ async def test_database():
     
 # Add auth router
 app.include_router(auth.router, prefix="/api/v1/auth", tags=["authentication"])
+
+# Add analysis router
+app.include_router(analysis.router, prefix="/api/v1/analysis", tags=["analysis"])
+
+# Add router
+app.include_router(cloud_accounts.router, prefix="/api/v1/cloud-accounts", tags=["cloud-accounts"])
+
