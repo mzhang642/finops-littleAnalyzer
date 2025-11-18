@@ -195,6 +195,7 @@ class CloudAccount(Base):
     organization = relationship("Organization", back_populates="cloud_accounts")
     resources = relationship("Resource", back_populates="cloud_account", cascade="all, delete-orphan")
     anomalies = relationship("Anomaly", back_populates="cloud_account", cascade="all, delete-orphan")
+    aws_resources = relationship("AWSResource", back_populates="cloud_account")
 
 
 class Resource(Base):
@@ -343,5 +344,3 @@ class SavingsReport(Base):
     # Relationships
     organization = relationship("Organization", back_populates="savings_reports")
 
-    # Add to CloudAccount relationships
-    aws_resources = relationship("AWSResource", back_populates="cloud_account")
