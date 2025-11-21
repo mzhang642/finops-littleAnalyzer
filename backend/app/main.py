@@ -75,3 +75,7 @@ app.include_router(analysis.router, prefix="/api/v1/analysis", tags=["analysis"]
 # Add router
 app.include_router(cloud_accounts.router, prefix="/api/v1/cloud-accounts", tags=["cloud-accounts"])
 
+
+from app.routers import ml_analysis
+app.include_router(ml_analysis.router, prefix="/api/v1/ml", tags=["ml-analysis"])
+
