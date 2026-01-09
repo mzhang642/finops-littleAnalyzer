@@ -13,6 +13,7 @@ from app.models.base import CloudAccount, Organization
 from app.utils.auth import get_current_user
 from app.utils.encryption import encrypt_credentials
 from app.services.aws_base import AWSService
+from typing import List, Optional
 
 router = APIRouter()
 logger = logging.getLogger(__name__)
@@ -32,8 +33,8 @@ class CloudAccountResponse(BaseModel):
     account_id: str
     account_name: str
     is_active: bool
-    last_sync: datetime = None
-    last_sync_status: str = None
+    last_sync: Optional[datetime] = None
+    last_sync_status: Optional[str] = None
 
 
 @router.post("/connect", response_model=CloudAccountResponse)

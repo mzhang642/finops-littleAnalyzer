@@ -10,6 +10,7 @@ from app.routers import auth
 from app.database import engine, Base
 from app.routers import analysis
 from app.routers import cloud_accounts
+from sqlalchemy import text
 
 # Load environment variables
 load_dotenv()
@@ -59,7 +60,7 @@ async def test_database():
         from app.database import SessionLocal
         db = SessionLocal()
         # Simple query to test connection
-        result = db.execute("SELECT 1")
+        result = db.execute(text("SELECT 1"))
         db.close()
         return {"status": "connected", "message": "Database connection successful"}
     except Exception as e:
